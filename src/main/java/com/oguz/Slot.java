@@ -3,6 +3,7 @@ package com.oguz;
 import jakarta.persistence.*;
 
 @Entity
+@Table (name = "slot")
 public class Slot {
 
     @Id
