@@ -50,7 +50,7 @@ public class Slot {
     }
 
     public int getFloorNumber() {
-        return floorNumber;car.
+        return floorNumber;
     }
 
     public void setFloorNumber(int floorNumber){
