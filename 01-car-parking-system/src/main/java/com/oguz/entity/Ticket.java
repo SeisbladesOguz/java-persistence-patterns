@@ -2,7 +2,7 @@ package com.oguz.entity;
 import com.oguz.entity.Car;
 import com.oguz.entity.Slot;
 import jakarta.persistence.*;
-import jdk.vm.ci.meta.Local;
+
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
