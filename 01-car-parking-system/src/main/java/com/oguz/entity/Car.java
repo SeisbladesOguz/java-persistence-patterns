@@ -10,10 +10,10 @@ public class Car {
     private int carId;
 
 
-    @Column (name = car_number , nullable = false , length = 50)
+    @Column (name = "car_number" , nullable = false , length = 50)
     private int carNumber;
 
-    @Column (name = car_model , nullable = false , length = 50)
+    @Column (name = "car_model" , nullable = false , length = 50)
     private String carModel;
 
     public Car(){

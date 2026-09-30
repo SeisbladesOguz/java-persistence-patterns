@@ -1,5 +1,8 @@
 package com.oguz;
 
+import com.oguz.util.JpaUtil;
+import jakarta.persistence.EntityManager;
+
 import java.io.InputStream;
 import java.util.Properties;
 
