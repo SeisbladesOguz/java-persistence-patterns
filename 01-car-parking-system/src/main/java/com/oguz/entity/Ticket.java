@@ -1,6 +1,6 @@
 package com.oguz.entity;
-import com.oguz.Car;
-import com.oguz.Slot;
+import com.oguz.entity.Car;
+import com.oguz.entity.Slot;
 import jakarta.persistence.*;
 import jdk.vm.ci.meta.Local;
 

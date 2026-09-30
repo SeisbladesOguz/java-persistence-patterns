@@ -1,5 +1,4 @@
-package com.oguz;
-
+package com.oguz.entity;
 import jakarta.persistence.*;
 
 @Entity
