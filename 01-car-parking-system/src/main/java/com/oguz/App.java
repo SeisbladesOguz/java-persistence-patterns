@@ -15,7 +15,11 @@ public class App {
         } catch (Exception e) {
             System.err.print("Connection error");
             e.printStackTrace();
+
+
         }
+
+
 
 
     }

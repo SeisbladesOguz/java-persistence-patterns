@@ -14,7 +14,8 @@
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/car_parking_system"/>
-            <!-- Kullanıcı adı ve şifreniz gerekiyorsa burayı güncelleyin -->
+
+
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
             <property name="jakarta.persistence.jdbc.password" value="postgres"/>
 
