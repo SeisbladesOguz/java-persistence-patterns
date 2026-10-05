@@ -2,6 +2,7 @@ package com.oguz;
 
 import com.oguz.entity.Slot;
 import com.oguz.repository.SlotRepository;
+import com.oguz.service.Recording;
 import com.oguz.util.DatabaseSeeder;
 import com.oguz.util.JpaUtil;
 import jakarta.persistence.EntityManager;
@@ -27,5 +28,8 @@ public class App {
         }
 
         DatabaseSeeder.firstSlotData();
+
+
+        Recording.carParkingAvaliableSlots();
     }
 }
