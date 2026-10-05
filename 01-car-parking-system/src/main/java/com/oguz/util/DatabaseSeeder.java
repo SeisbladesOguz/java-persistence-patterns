@@ -11,12 +11,12 @@ public class DatabaseSeeder {
 
     }
 
-    public void firstSlotData(){
+    public static void firstSlotData(){
 
 
         for(int floor =1 ; floor <=3 ; floor++){
             for(int slotNum = 1; slotNum <= 5; slotNum++){
-                Slot newSlot = new Slot(slotNum , floor);
+                Slot newSlot = new Slot(slotNum , floor , false);
                 SlotRepository.save(newSlot);
             }
         }

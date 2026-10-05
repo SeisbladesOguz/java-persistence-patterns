@@ -29,7 +29,8 @@ public class Slot {
         this.floorNumber = floorNumber;
     }
 
-    public Slot(int number, int floorNumber) {
+    public Slot(int number, int floorNumber , boolean isOccupied) {
+        this.isOccupied = isOccupied;
         this.number = number;
         this.floorNumber = floorNumber;
     }
