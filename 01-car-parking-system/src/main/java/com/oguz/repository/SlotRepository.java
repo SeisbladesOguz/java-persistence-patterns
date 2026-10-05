@@ -18,20 +18,34 @@ public class SlotRepository {
 
     public static void save(Slot slot){
 
-        try{
-            em.getTransaction().begin();
 
-            em.persist(slot);
+        if(SlotRepository.allSlotNumber() == 15){
+            return;
+        }else{
 
-            em.getTransaction().commit();
+            try{
+                em.getTransaction().begin();
+
+                em.persist(slot);
+
+                em.getTransaction().commit();
+            }
+            catch(Exception e){
+
+                em.getTransaction().rollback();
+
+
+            }
+
         }
-        catch(Exception e){
-
-            em.getTransaction().rollback();
 
 
-        }
 
+    }
+
+    public static Long allSlotNumber(){
+
+        return em.createQuery("SELECT COUNT(s) FROM Slot s" , Long.class).getSingleResult();
     }
 
     public static List<Slot> findAllSlots() {
