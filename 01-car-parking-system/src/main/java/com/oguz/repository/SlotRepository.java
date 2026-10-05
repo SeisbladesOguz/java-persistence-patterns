@@ -11,26 +11,24 @@ public class SlotRepository {
     private static EntityManager em = JpaUtil.getEntityManager();
 
 
-
     public SlotRepository() {
 
     }
 
-    public static void save(Slot slot){
+    public static void save(Slot slot) {
 
 
-        if(SlotRepository.allSlotNumber() == 15){
+        if (SlotRepository.allSlotNumber() == 15) {
             return;
-        }else{
+        } else {
 
-            try{
+            try {
                 em.getTransaction().begin();
 
                 em.persist(slot);
 
                 em.getTransaction().commit();
-            }
-            catch(Exception e){
+            } catch (Exception e) {
 
                 em.getTransaction().rollback();
 
@@ -40,25 +38,35 @@ public class SlotRepository {
         }
 
 
-
     }
 
-    public static Long allSlotNumber(){
+    public static Long allSlotNumber() {
 
-        return em.createQuery("SELECT COUNT(s) FROM Slot s" , Long.class).getSingleResult();
+        return em.createQuery("SELECT COUNT(s) FROM Slot s", Long.class).getSingleResult();
     }
 
     public static List<Slot> findAllSlots() {
 
-            return em.createQuery("SELECT s FROM Slot s" , Slot.class).getResultList();
+        return em.createQuery("SELECT s FROM Slot s", Slot.class).getResultList();
 
     }
 
-    public static List<Slot> findEmptySlots(){
+    public static List<Slot> findEmptySlots() {
 
-        return em.createQuery("SELECT s FROM Slot s WHERE s.isOccupied = false" , Slot.class).getResultList();
+        return em.createQuery("SELECT s FROM Slot s WHERE s.isOccupied = false", Slot.class).getResultList();
     }
 
+    //Returns the number of available slots.
+    public int findEmptySlotsNumber() {
 
+      return  SlotRepository.findEmptySlots().size();
+    }
 
 }
+
+
+
+
+
+
+

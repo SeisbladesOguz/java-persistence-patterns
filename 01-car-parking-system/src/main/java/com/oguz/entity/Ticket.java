@@ -39,6 +39,10 @@ public class Ticket {
        this.exitTime = exitTime;
     }
 
+    public Ticket(Slot slot , Car car , LocalDateTime entryTime , LocalDateTime exitTime){
+
+    }
+
 
     public Ticket(){
 

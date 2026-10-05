@@ -5,6 +5,7 @@ import com.oguz.entity.Slot;
 import com.oguz.entity.Ticket;
 import com.oguz.repository.SlotRepository;
 
+import java.time.LocalTime;
 import java.util.List;
 
 public class Recording {
@@ -21,6 +22,13 @@ public class Recording {
            int emptySlotsNumber = emptySlots.getNumber();
            System.out.println("Empty slot is: " + emptySlotsNumber);
         }
+   }
+
+   public Ticket createTicket(Car car , Slot slot , LocalTime entryTime , LocalTime exitTime){
+
+        Ticket newTicket = new Ticket ();
+
+        return null;
    }
 
 }
