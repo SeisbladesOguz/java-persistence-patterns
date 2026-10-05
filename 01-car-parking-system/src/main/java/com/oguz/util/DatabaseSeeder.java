@@ -13,10 +13,15 @@ public class DatabaseSeeder {
 
     public static void firstSlotData(){
 
+        int currentSlotNumber = 1;
+
 
         for(int floor =1 ; floor <=3 ; floor++){
+
             for(int slotNum = 1; slotNum <= 5; slotNum++){
-                Slot newSlot = new Slot(slotNum , floor , false);
+
+                Slot newSlot = new Slot(currentSlotNumber , floor , false);
+                currentSlotNumber++;
                 SlotRepository.save(newSlot);
             }
         }

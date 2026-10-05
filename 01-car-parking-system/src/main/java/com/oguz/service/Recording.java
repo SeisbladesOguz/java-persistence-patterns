@@ -13,24 +13,14 @@ public class Recording {
 
     }
 
-
-   public static void carParkingAvaliableSlots(){
-
-
-
+   public  void carParkingAvaliableSlots(){
         List<Slot> emptySlotList =  SlotRepository.findEmptySlots();
 
-        for(int i = 0; i <= emptySlotList.size(); i++ ){
+        for(int i = 0; i <= emptySlotList.size() - 1; i++ ){
            Slot emptySlots = emptySlotList.get(i);
-           System.out.println("Empty slot is: " + emptySlots);
+           int emptySlotsNumber = emptySlots.getNumber();
+           System.out.println("Empty slot is: " + emptySlotsNumber);
         }
-        //Find empty slot and create Ticket.
-
-
-
-
    }
-
-
 
 }

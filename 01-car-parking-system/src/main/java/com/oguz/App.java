@@ -15,9 +15,6 @@ public class App {
     public static void main(String[] args) {
 
 
-
-
-
         try (EntityManager em = JpaUtil.getEntityManager()) {
             System.out.println("Connection is completed");
         } catch (Exception e) {
@@ -30,6 +27,8 @@ public class App {
         DatabaseSeeder.firstSlotData();
 
 
-        Recording.carParkingAvaliableSlots();
+        Recording parkingLot_Istanbul = new Recording();
+
+         parkingLot_Istanbul.carParkingAvaliableSlots();
     }
 }
