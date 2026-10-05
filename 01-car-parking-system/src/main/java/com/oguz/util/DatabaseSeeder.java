@@ -1,0 +1,27 @@
+package com.oguz.util;
+
+import com.oguz.entity.Slot;
+import com.oguz.repository.SlotRepository;
+
+public class DatabaseSeeder {
+
+
+
+    public DatabaseSeeder(){
+
+    }
+
+    public void firstSlotData(){
+
+
+        for(int floor =1 ; floor <=3 ; floor++){
+            for(int slotNum = 1; slotNum <= 5; slotNum++){
+                Slot newSlot = new Slot(slotNum , floor);
+                SlotRepository.save(newSlot);
+            }
+        }
+
+    }
+
+
+}

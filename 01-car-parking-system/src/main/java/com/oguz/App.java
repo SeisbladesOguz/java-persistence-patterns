@@ -1,5 +1,8 @@
 package com.oguz;
 
+import com.oguz.entity.Slot;
+import com.oguz.repository.SlotRepository;
+import com.oguz.util.DatabaseSeeder;
 import com.oguz.util.JpaUtil;
 import jakarta.persistence.EntityManager;
 
@@ -10,6 +13,10 @@ import jakarta.persistence.EntityManager;
 public class App {
     public static void main(String[] args) {
 
+
+
+
+
         try (EntityManager em = JpaUtil.getEntityManager()) {
             System.out.println("Connection is completed");
         } catch (Exception e) {
@@ -18,6 +25,7 @@ public class App {
 
 
         }
+
 
 
 
